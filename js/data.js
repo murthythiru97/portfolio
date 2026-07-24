@@ -129,8 +129,8 @@ const portfolioData = {
       shortDesc: "End-to-end wearable IoT solution with BLE indoor localization, Wi-Fi, Zephyr RTOS, and Python backend.",
       longDesc: "Developed under VVDN Technologies Product 360 Initiative. Features custom multi-layer PCB schematics designed in KiCad, Nordic nRF7002DK integration, Zephyr RTOS multi-threaded firmware, OLED I2C screen, haptic alerts, child proximity detection, and Python cloud backend API synchronization.",
       techStack: ["Nordic nRF7002DK", "Zephyr RTOS", "KiCad PCB Design", "BLE 5.3 / Wi-Fi 6", "Python", "Firebase"],
-      liveUrl: "https://github.com/murthythiru97/aerolinkers-wearable-iot",
-      githubUrl: "https://github.com/murthythiru97/aerolinkers-wearable-iot",
+      liveUrl: "https://github.com/murthythiru97/aerolinkers-sw",
+      githubUrl: "https://github.com/murthythiru97/aerolinkers-sw",
       featured: true
     },
     {

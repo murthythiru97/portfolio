@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thirumurthy S | Embedded Systems & ECE Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Thirumurthy S, an Electronics and Communication Engineering student specializing in Embedded Systems, IoT, Zephyr RTOS, PCB Design, and VLSI." />
+  <meta name="keywords" content="Thirumurthy S, Embedded Systems, IoT, ECE, Zephyr RTOS, ESP32, PCB Design, Verilog, Microchip, Erode, Portfolio" />
+  <meta name="author" content="Thirumurthy S" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Thirumurthy S | Embedded Systems & ECE Engineer" />
+  <meta property="og:description" content="Explore my projects, embedded systems hardware, Zephyr RTOS firmware, and ECE engineering work." />
+  <meta property="og:type" content="website" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Interactive Canvas Background & Spotlight -->
+  <canvas id="bg-canvas"></canvas>
+  <div id="cursor-spotlight" class="cursor-spotlight"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        Thirumurthy<span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://github.com/murthythiru97" target="_blank" class="btn-icon" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/thirumurthy-s/" target="_blank" class="btn-icon" aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <button id="theme-toggle-btn" class="btn-icon" aria-label="Toggle dark/light mode">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-toggle-btn" class="btn-icon mobile-toggle" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text-content">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span> Open for ECE & Embedded Systems Roles
+            </div>
+            
+            <h1 class="hero-title">
+              Hi, I'm <span id="profile-name" class="gradient-text">Thirumurthy S</span>
+            </h1>
+
+            <div class="typing-container">
+              I am an&nbsp;<span id="typing-text" style="color:var(--accent-cyan); font-weight:700;"></span><span class="typing-cursor"></span>
+            </div>
+
+            <p id="profile-bio" class="hero-bio">
+              Electronics and Communication Engineering student with hands-on experience in embedded systems, IoT architecture, circuit design, and firmware development.
+            </p>
+
+            <div class="hero-cta">
+              <a href="assets/Thirumurthy_Resume.pdf" download="Thirumurthy_Resume.pdf" target="_blank" class="btn btn-primary">
+                <i class="fas fa-file-download"></i> Download CV
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                View Projects <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="https://github.com/murthythiru97" target="_blank" class="btn btn-secondary">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                Contact Me <i class="fas fa-paper-plane"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-avatar-wrapper">
+            <div class="avatar-frame">
+              <img id="profile-avatar-img" src="assets/avatar.png" alt="Thirumurthy S Profile Avatar" class="avatar-img" />
+            </div>
+
+            <div class="hero-stat-card">
+              <div class="icon-box"><i class="fas fa-microchip"></i></div>
+              <div>
+                <div class="stat-val">B.E. ECE</div>
+                <div class="stat-lbl">K S Rangasamy College of Technology</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section & Stats Counters -->
+    <section class="section" id="about">
+      <div class="container">
+        <!-- Interactive Stat Numbers -->
+        <div class="stats-grid" id="stats-grid"></div>
+
+        <div class="section-header">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">ECE Student & Embedded Systems Creator</h2>
+          <p class="section-subtitle">Bridging practical electronics, firmware design, and cloud IoT connectivity.</p>
+        </div>
+
+        <div class="glass-card about-content-grid">
+          <div class="about-tabs-nav">
+            <button class="tab-btn active" onclick="switchAboutTab(event, 'tab-story')">Biography</button>
+            <button class="tab-btn" onclick="switchAboutTab(event, 'tab-education')">Education</button>
+            <button class="tab-btn" onclick="switchAboutTab(event, 'tab-achievements')">Achievements & IETE</button>
+          </div>
+
+          <div id="tab-story" class="tab-pane active"></div>
+          <div id="tab-education" class="tab-pane"></div>
+          <div id="tab-achievements" class="tab-pane">
+            <div style="margin-bottom:1.5rem;">
+              <h4 style="font-size:1.1rem; color:var(--accent-cyan);"><i class="fas fa-trophy"></i> Key Achievements</h4>
+              <ul style="list-style:none; margin-top:0.8rem;">
+                <li style="margin-bottom:0.5rem; color:var(--text-secondary);"><i class="fas fa-medal" style="color:var(--accent-purple);"></i> Selected for VVDN Product 360 Prototype Development Program</li>
+                <li style="margin-bottom:0.5rem; color:var(--text-secondary);"><i class="fas fa-award" style="color:var(--accent-cyan);"></i> First Prize – Mini Project Contest (DC to AC Converter Design)</li>
+                <li style="margin-bottom:0.5rem; color:var(--text-secondary);"><i class="fas fa-certificate" style="color:var(--accent-purple);"></i> Completed Microchip Technology Embedded Systems Internship</li>
+                <li style="margin-bottom:0.5rem; color:var(--text-secondary);"><i class="fas fa-laptop-code" style="color:var(--accent-cyan);"></i> Built Industrial Temperature Monitoring System at Domain Hackathon</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="font-size:1.1rem; color:var(--accent-cyan);"><i class="fas fa-id-badge"></i> Professional Membership & Interests</h4>
+              <p style="color:var(--text-secondary); margin-top:0.5rem;">Member of <strong>IETE</strong> (The Institution of Electronics and Telecommunication Engineers).</p>
+              <p style="color:var(--text-secondary); margin-top:0.3rem;">Primary Areas of Interest: <strong>VLSI Design</strong> & <strong>Embedded System with IoT</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / What I Do -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Domains & Expertise</span>
+          <h2 class="section-title">Core Engineering Capabilities</h2>
+          <p class="section-subtitle">Electronics hardware prototyping, microcontroller firmware, and cloud IoT integration.</p>
+        </div>
+
+        <div class="services-grid" id="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Stack Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technical Proficiency</span>
+          <h2 class="section-title">Skills & Software Tools</h2>
+          <p class="section-subtitle">Programming languages, EDA simulation suites, and hardware platforms.</p>
+        </div>
+
+        <div class="skills-filter">
+          <button class="filter-btn skill-filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn skill-filter-btn" data-filter="embedded">Embedded Systems</button>
+          <button class="filter-btn skill-filter-btn" data-filter="hardware">Hardware & VLSI</button>
+          <button class="filter-btn skill-filter-btn" data-filter="cloud">Cloud & Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Practical Exposure</span>
+          <h2 class="section-title">Internships & Product Initiatives</h2>
+          <p class="section-subtitle">Hands-on experience in microcontroller programming and hardware development.</p>
+        </div>
+
+        <div class="timeline" id="experience-timeline"></div>
+      </div>
+    </section>
+
+    <!-- Portfolio Projects Showcase -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Hardware & Systems</span>
+          <h2 class="section-title">Featured ECE Projects</h2>
+          <p class="section-subtitle">End-to-end wearable IoT solutions, medical monitoring devices, and circuit designs.</p>
+        </div>
+
+        <div class="skills-filter">
+          <button class="filter-btn project-filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn project-filter-btn" data-filter="ai">Flagship IoT</button>
+          <button class="filter-btn project-filter-btn" data-filter="web">Hardware Devices</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Recognition</span>
+          <h2 class="section-title">Evaluations & Recommendations</h2>
+          <p class="section-subtitle">Feedback on hardware prototyping, embedded firmware, and academic dedication.</p>
+        </div>
+
+        <div class="testimonials-grid" id="testimonials-grid"></div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact Thirumurthy</h2>
+          <p class="section-subtitle">Looking for embedded systems talent or project collaboration? Reach out!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="glass-card">
+            <h3>Contact Information</h3>
+            <p style="color:var(--text-secondary); margin-top:0.5rem;">Feel free to contact me via phone, email, or LinkedIn.</p>
+
+            <div class="contact-info-list">
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value" id="contact-email-val">murthythiru97@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <div class="contact-value">+91 9944441720</div>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <div class="contact-value" id="contact-loc-val">Kallippatti, Gobichettipalayam, Erode - 638505</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="glass-card">
+            <div id="form-status" class="form-status"></div>
+
+            <form id="contact-form" action="https://formspree.io/f/murthythiru97@gmail.com" method="POST">
+              <input type="hidden" name="_to" value="murthythiru97@gmail.com" />
+              <input type="hidden" name="_subject" value="New Inquiry from Portfolio Website (Thirumurthy S)" />
+
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Recruiter / Collaborator" required />
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Email Address</label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. contact@company.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message</label>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Write your message or opportunity details..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;">
+                Send Message <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div>
+        <p>&copy; <span id="year-copy">2026</span> <strong>Thirumurthy S</strong>. Electronics & Communication Engineer.</p>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/murthythiru97" target="_blank" id="github-link" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/thirumurthy-s/" target="_blank" id="linkedin-link" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#hero" class="social-link" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal Overlay -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close modal"><i class="fas fa-times"></i></button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Inline Tab Switcher Script -->
+  <script>
+    function switchAboutTab(evt, tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+      evt.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+
+  <!-- Application Logic Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
